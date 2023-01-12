@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽類 - UI元素狀態</title>
+  <style>
+    /* input */
+    input:disabled {
+      background-color: yellowgreen;
+    }
+
+    input:checked+label {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>example: disabled</h1>
+  <input type="text" id="input1" disabled>
+  <label for="input1">disabled</label>
+  <p>原生輸入框disabled時是灰色的</p>
+
+  <h1>example: checked</h1>
+  <input type="checkbox" id="input2">
+  <label for="input2">選我變藍</label>
+  <input type="checkbox" id="input3" checked>
+  <label for="input3">選我變藍</label>
+  <input type="checkbox" id="input4">
+  <label for="input4">選我變藍</label>
+  <p>checkbox是多選</p>
+
+  <input type="radio" id="input5">
+  <label for="input5">選我變藍</label>
+  <input type="radio" id="input6">
+  <label for="input6">選我變藍</label>
+  <input type="radio" id="input7">
+  <label for="input7">選我變藍</label>
+  <p>radio是單選</p>
+  <p>兩種都有checked屬性</p>
+</body>
+
+</html>

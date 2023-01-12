@@ -1,0 +1,191 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  display: flex;
+}
+
+/* 左側選單 start */
+.homepage_left>ul {
+  width: 250px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.homepage_left>ul li {
+  height: 30px;
+  max-width: 250px;
+  color: white;
+  background-color: #3c3c3c;
+  padding: 0 10px;
+  box-sizing: border-box;
+  line-height: 30px;
+}
+
+.homepage_left>ul li:hover {
+  color: #3c3c3c;
+  background-color: white;
+  font-weight: 700;
+  border-left: 5px solid red;
+}
+
+/* 左側選單 end */
+
+.homepage_right {
+  width: 960px;
+  margin-left: 40px;
+}
+
+.superbrand_top {
+  display: flex;
+  gap: 10px;
+}
+
+.superbrand {
+  width: 100%;
+  background-color: lightblue;
+  border-radius: 20px 20px 0 0;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.superbrand span {
+  font-size: 20px;
+  color: white;
+  margin-left: 10px;
+}
+
+.superbrand_content {
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.superbrand_item {
+  width: 454px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-picture {
+  width: 184px;
+  height: 184px;
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url('https://event.shopping.friday.tw/event/homepage/brand_banner/1219/stage/img01.jpg?v=11231116');
+  background-size: contain;
+  position: relative;
+}
+
+.lookmore {
+  max-width: fit-content;
+  font-size: 12px;
+  color: #f4f4f4;
+  background-color: #3c3c3c;
+  padding: 3px 7px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.lookmore span {
+  width: 12px;
+  height: 12px;
+  background-color: #f4f4f4;
+  display: inline-block;
+  border-radius: 50px;
+  margin-left: 5px;
+}
+
+.lookmore span::after {
+  content: '';
+  height: 0;
+  border: 4.5px solid;
+  border-color: transparent transparent transparent #3c3c3c;
+  border-radius: 1.5px;
+  display: inline-block;
+  transform: translate(4.5px, 0);
+}
+
+.logo {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 0 10px 10px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35px, -10px);
+  z-index: 1;
+}
+
+.mask {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(0, 0, 0, .5);
+  font-size: 13px;
+  padding: 20px 0 7px 0;
+}
+
+.mask p {
+  margin: 0;
+  line-height: 20px;
+  text-align: center;
+}
+
+.supbrand_cards {
+  width: 105px;
+  height: fit-content;
+  border-radius: 10px 10px 0 0;
+  display: inline-block;
+}
+
+.supbrand_cards img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+}
+
+.supbrand_cards>p {
+  font-size: 14px;
+  color: #3c3c3c;
+  line-height: 14px;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+.supbrand_cards .price {
+  font-size: 20px;
+  color: red;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.price::before {
+  content: '$';
+  font-size: 14px;
+  margin-right: 3px;
+}

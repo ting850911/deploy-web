@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo Classes</title>
+  <style>
+    p:last-of-type {
+      border-bottom: 1px solid;
+      width: 30%;
+      margin-bottom: 30px;
+    }
+
+    p span {
+      color: red;
+      background: yellow;
+      margin: 0 2px;
+    }
+
+    .pseudoAfter::after {
+      content: '加在後面～';
+      color: blueviolet;
+      font-size: 13px;
+    }
+
+    .pseudoBefore::before {
+      content: '加在前面～';
+      color: blueviolet;
+      font-size: 13px;
+    }
+
+    .pseudoPic {
+      width: 120px;
+      position: relative;
+      border: 1px solid #f34f59;
+      display: inline-block;
+      border-radius: 5px;
+    }
+
+    /* 設成圖片要給尺寸 */
+    .pseudoPic::after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTIgMHYxMGEyIDIgMCAwMS0yIDJIMEwxMiAweiIgZmlsbD0iI0YzNEY1OSIvPjxwYXRoIGQ9Ik0xMC4zODYgNi4wMDJhLjU4OC41ODggMCAwMC0uNDA0LjIxbC0yLjI0NSAyLjU4LTEuMjM1LTEuMTE3YS41NzcuNTc3IDAgMDAtLjg0NS4wNC42NTYuNjU2IDAgMDAuMDY3LjkyTDcuNCAxMC4xNWMuMjQ1LjIyMi42MTIuMi44My0uMDVsMi42MzUtMy4wMzJhLjY1Ny42NTcgMCAwMC0uMDItLjg5My41OC41OCAwIDAwLS40Ni0uMTczIiBmaWxsPSIjRkZGIi8+PC9nPjwvc3ZnPg==");
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="origin">我是偽元素！</h1>
+  <p>::before和::after一定要加入<span>content</span>屬性才會有作用！！！</p>
+  <p>雖然我是假的，但是一般element可以的樣式我也可以～</p>
+  <h3 class="pseudoAfter">我是偽元素！</h3>
+  <h3 class="pseudoBefore">我是偽元素！</h3>
+  <h3 class="pseudoPic">我是偽元素！</h3>
+</body>
+
+</html>

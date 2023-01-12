@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position</title>
+  <style>
+    .box {
+      font-size: 20px;
+      width: 500px;
+      height: 500px;
+      border: 1px solid;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: scroll;
+    }
+
+    .item {
+      font-size: 12px;
+      height: 300px;
+      width: 400px;
+      background-color: skyblue;
+      margin-bottom: 10px;
+    }
+
+    .item2 {
+      position: relative;
+    }
+
+    .item3 {
+      width: fit-content;
+      height: fit-content;
+      color: white;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(125, 125, 125, 0.5)
+    }
+
+    .item4 {
+      width: fit-content;
+      height: fit-content;
+      padding: 10px;
+      position: fixed;
+      right: 50px;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .item1 {
+      height: 20px;
+      background-color: lightsalmon;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    box
+    <div class="item1 item">sticky: 黏在父層上</div>
+    <div class="item2 item">第2個</div>
+    <div class="item3 item">close X</div>
+    <div class="item4 item">Up &#8593;</div>
+    <div class="item5 item">第5個</div>
+  </div>
+  <p>relative: 偏移，相對原始資料流位置，未設定變量->在原地</p>
+  <p>absolute: 浮起來，找父層定位，所以要定義父層position屬性，未設定父層->視窗</p>
+  <p>常見absolute使用情境: popup廣告的X (homepage->折扣小標)</p>
+  <p>fixed: 永遠浮在視窗上，不會因為畫面滾動被捲走</p>
+  <p>常見fixed使用情境: homepage->右下角Top</p>
+  <p>sticky: 黏在父層上，會因為畫面滾動被捲走</p>
+  <p>常見sticky使用情境: product page->商品規格...</p>
+</body>
+
+</html>

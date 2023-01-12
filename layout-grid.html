@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="layout.css">
+  <title>Grid</title>
+  <style>
+    .container {
+      width: 600px;
+      height: 300px;
+      border: 1px solid black;
+      display: grid;
+      grid-template-rows: repeat(2, 100px);
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+        "header header header header header header"
+        "side  content content content content content"
+        "side content content content content content";
+      gap: 10px;
+    }
+
+    .items {
+      background: lightblue;
+      border: 1px solid;
+    }
+
+    .items-header {
+      grid-area: header;
+      background-color: lightcoral;
+    }
+
+    .items-side {
+      grid-area: side;
+      background-color: lightyellow;
+      /* grid-row: 2 / 3;
+      grid-column: 2 / 4; */
+    }
+
+    .items-content {
+      grid-area: content;
+      background-color: lightseagreen;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="items items-header">header</div>
+    <div class="items items-header">header</div>
+    <div class="items items-header">header</div>
+    <div class="items items-header">header</div>
+    <div class="items items-header">header</div>
+    <div class="items items-header">header</div>
+    <div class="items items-side">side</div>
+    <div class="items items-side">side</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+    <div class="items items-content">content</div>
+  </div>
+  <p>1.用grid-template-columns/rows->定義行列數</p>
+  <p style="padding-left: 12px;">可用repeat() 運算子簡寫</p>
+  <p style="padding-left: 12px; color: red;">可用fr作為一等份的單位->fraction</p>
+  <p>2.用grid-template-areas->定義區塊</p>
+  <p style="padding-left: 12px;">子項目要用grid-area命名區塊</p>
+  <p style="padding-left: 12px; color: red;">區塊不能分離且是唯一的</p>
+  <p>3.用grid-auto-columns/rows->自動分配</p>
+  <p>4.用grid-auto-flow改變排序方向(column/row)</p>
+  <p>5.子項目用grid-row/column->表示起始值</p>
+</body>
+
+</html>

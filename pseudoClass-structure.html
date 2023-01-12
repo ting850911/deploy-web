@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽類 - 結構</title>
+  <style>
+    .box1 li:first-child,
+    .box1 li:last-child,
+    .box1 li:nth-child(3) {
+      color: hotpink;
+    }
+
+    .box2 li:nth-child(even) {
+      color: aquamarine;
+    }
+
+    .wrap * {
+      display: block;
+      border: 1px solid lightskyblue;
+      margin-bottom: 5px;
+    }
+
+    /* span & div是一組分類 */
+    .wrap span:last-of-type {
+      background-color: red;
+    }
+
+    .wrap :nth-of-type(3) {
+      color: coral;
+    }
+
+    /* .A是一組 */
+    div.A:nth-of-type(2n) {
+      color: lightgreen
+    }
+  </style>
+</head>
+
+<body>
+  <h1>*-child</h1>
+  <!--  first: 第一個
+        last: 最後一個
+        nth: 第n個 -->
+  <ul class="box1">
+    <li class="item">item1</li>
+    <li class="item">item2</li>
+    <li class="item">item3</li>
+    <li class="item">item4</li>
+    <li class="item">item5</li>
+  </ul>
+
+  <h1>奇偶數</h1>
+  <!-- odd: 奇數
+       even: 偶數
+       Xn: 第X倍 e.g. nth(5n): 選取5的倍數 -->
+  <ul class="box2">
+    <li class="item">item1</li>
+    <li class="item">item2</li>
+    <li class="item">item3</li>
+    <li class="item">item4</li>
+    <li class="item">item5</li>
+  </ul>
+
+  <h1>*-of-type</h1>
+  <div class="wrap" style="width: 200px;">
+    <span>span 1</span>
+    <div>div 1</div>
+    <span>span 2</span>
+    <div>div 2</div>
+    <span class="A">span 3.A</span>
+    <div class="A">div 3.A</div>
+    <span class="A">span 4.A</span>
+    <div class="A">div 4.A</div>
+    <span>span 5</span>
+    <div>div 5</div>
+    <span>span 6</span>
+    <div>div 6</div>
+    <span class="A">span 7.A</span>
+    <div class="A">div 7.A</div>
+    <span class="A">span 8.A</span>
+    <div class="A">div 8.A</div>
+  </div>
+  <p>*-of-type主要看的是分類順序</p>
+</body>
+
+</html>

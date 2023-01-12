@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>偽類 - 動態</title>
+  <style>
+    /* 原始<a>本人 */
+    a:link {
+      color: red;
+    }
+
+    /* 被造訪過的網址(<a>) */
+    a:visited {
+      color: green;
+    }
+
+    /* 滑過<a> */
+    a:hover {
+      color: hotpink;
+    }
+
+    /* 點擊不放<a> */
+    a:active {
+      color: orange;
+    }
+
+    /* for other elements */
+    button {
+      color: aliceblue;
+      background-color: brown;
+      border: unset;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .box {
+      display: none;
+    }
+
+    button:hover+.box {
+      display: block;
+    }
+
+    /* focus */
+    input:focus {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>example-active: a</h1>
+  <!--  1. 【尚未點擊】:link
+        2. 【滑鼠觸碰】:hover
+        3. 【點擊當下】:active
+        4. 【取得焦點】:focus
+        5. 【點擊過後】:visited -->
+  <a href="https://www.notion.so/CSS-Tutorial-CSS?21309" target="_blank">這是一個超連結</a>
+  <p>原生的鏈結是<a style="color: -webkit-link;" href="http://127.0.0.1:5500/pseudoClass.html">藍色</a>字</p>
+
+  <h1>example-active: other elements</h1>
+
+  <button type="button">Hover show imgs</button>
+  <div class="box">
+    <img src="https://fakeimg.pl/100/">
+    <img src="https://fakeimg.pl/100/">
+    <img src="https://fakeimg.pl/100/">
+    <img src="https://fakeimg.pl/100/">
+  </div>
+  <p>1.先把box裡的items藏起來</p>
+  <p>2.在滑過按鈕的時候，才能顯示box裡的內容</p>
+
+  <h1>example-focus: input</h1>
+  <input type="text" id="focus">
+  <label for="focus">focus我變藍底</label>
+</body>
+
+</html>

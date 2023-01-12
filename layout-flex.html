@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="layout.css">
+  <title>Flex</title>
+  <style>
+    .container {
+      width: 700px;
+      height: 600px;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      /* flex-wrap: wrap; */
+      align-items: center;
+    }
+
+    .items {
+      color: cornflowerblue;
+      width: 90px;
+      height: 90px;
+      background-color: lightblue;
+      border: 1px solid cornflowerblue;
+    }
+
+    .items:last-of-type {
+      flex-basis: 100px;
+    }
+    .items:nth-of-type(2) {
+      flex-grow: 2;
+    }
+  </style>
+</head>
+
+<body>
+  box
+  <div class="container">
+    <div class="items">item1</div>
+    <div class="items">item2</div>
+    <div class="items">item3</div>
+    <div class="items">item4</div>
+    <div class="items">item5</div>
+    <div class="items">item6</div>
+    <div class="items">item7</div>
+  </div>
+  <p>設定flex後內部的子元素會變為行內元素排列</p>
+  <p>flex-direction：排列方向，預設row</p>
+  <p>flex-wrap子元素換行與否</p>
+  <p>flex-grow: 子元素空間加大</p>
+  <p>flex-shrink: 子元素空間縮小</p>
+  <p>flex-basis: 子元素空間基數，優先序大於width</p>
+</body>
+
+</html>
