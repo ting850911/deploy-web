@@ -9,6 +9,7 @@
 }
 
 .homepage__sidebar-item {
+  color: #f4f4f4;
   height: 40px;
   padding: 10px;
   box-sizing: border-box;
@@ -17,4 +18,43 @@
 
 .homepage__sidebar-item:hover {
   border-left: 3px solid red;
+}
+
+.super_brand {
+  width: 960px;
+  font-size: 14px;
+}
+
+.super_brand .top {
+  height: 50px;
+  background-color: lightblue;
+  border-radius: 40px 40px 0 0;
+  font-size: 20px;
+  color: #f4f4f4;
+  font-weight: bold;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.top img {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+.super_brand .down {
+  height: 244px;
+  background-color: #f4f4f4;
+  border-radius: 0 0 40px 40px;
+}
+
+*{
+  font-size: 14px;
+  color: red;
+}
+
+span.lookMore{
+  color: #3c3c3c;
 }
