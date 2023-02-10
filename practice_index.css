@@ -1,15 +1,18 @@
+* {
+  color: #f4f4f4;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .homepage__sidebar {
   background-color: #3c3c3c;
   width: 250px;
-  color: aliceblue;
   list-style: none;
   list-style-type: none;
   padding: 0;
   text-align: center;
 }
 
-.homepage__sidebar-item {
-  color: #f4f4f4;
+.homepage__sidebar>li {
   height: 40px;
   padding: 10px;
   box-sizing: border-box;
@@ -20,17 +23,16 @@
   border-left: 3px solid red;
 }
 
-.super_brand {
+.superbrand {
   width: 960px;
   font-size: 14px;
 }
 
-.super_brand .top {
+.superbrand_title {
   height: 50px;
   background-color: lightblue;
   border-radius: 40px 40px 0 0;
   font-size: 20px;
-  color: #f4f4f4;
   font-weight: bold;
   padding: 10px 30px;
   box-sizing: border-box;
@@ -38,23 +40,92 @@
   align-items: center;
 }
 
-.top img {
+.superbrand_title img {
   height: 30px;
   width: 30px;
   margin-right: 20px;
 }
 
-.super_brand .down {
+.superbrand_conteniner {
   height: 244px;
   background-color: #f4f4f4;
   border-radius: 0 0 40px 40px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-*{
-  font-size: 14px;
-  color: red;
+.supbrand_box {
+  width: 454px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-span.lookMore{
-  color: #3c3c3c;
+.superbrand_mainpic {
+  height: 184px;
+  width: 184px;
+  border-radius: 10px;
+  background-image: url('https://event.shopping.friday.tw/event/homepage/brand_banner/0206/stage/img01.jpg?v=1101415');
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 50px;
+  width: 70px;
+  border-radius: 0 10px 10px 10px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35px, -10px);
+}
+
+.mask {
+  height: 67px;
+  width: 184px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mask p{
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.lookMore {
+  font-size: 10px;
+  line-height: 12px;
+  background-color: #3c3c3c;
+  padding: 3px 7px;
+  border-radius: 10px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+}
+
+.lookMore span {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.lookMore span::after {
+  content: '';
+  height: 0;
+  border-color: transparent transparent transparent #3c3c3c;
+  border-width: 4px 0 4px 8px;
+  border-style: solid;
+  display: inline-block;
+  transform: translate(3.5px, 1px);
 }
