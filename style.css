@@ -1,0 +1,37 @@
+.main {
+  width: 100%;
+  height: 90vh;
+  background-image: url(/img/background/confortableDesk.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  font-family: 'QQ', 'Fredoka One', cursive;
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 10px rgb(107, 107, 107);
+}
+
+h2 {
+  font-size: 40px;
+}
+
+
+@font-face {
+  font-family: 'QQ';
+  src: url('https://fonts.gstatic.com/s/fredokaone/v13/k3kUo8kEI-tA1RRcTZGmTlHGCaen8wf-.woff2');
+}
+
+
+.down {
+  width: 100%;
+  background-image: url(/img/background/bethany-legg-9248.jpg);
+}
+
+.left-0 {
+  float: unset !important;
+}
+
+.card {
+  width: 17rem;
+}
